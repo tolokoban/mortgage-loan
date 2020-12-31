@@ -1,0 +1,85 @@
+{
+    "name": "template-react-typesctipt",
+    "version": "0.1.0",
+    "private": false,
+    "homepage": "./",
+    "sideEffects": [
+        "*.css"
+    ],
+    "dependencies": {
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.3",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-redux": "^6.0.1",
+        "react-test-renderer": "^16.13.1",
+        "redux": "^4.0.5",
+        "tfw": "^0",
+        "typescript": "^3.9.5"
+    },
+    "scripts": {
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build",
+        "prestart": "yarn link tfw",
+        "start": "webpack --mode development serve",
+        "build": "webpack",
+        "test": "jest --watch"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^11.1.2",
+        "@testing-library/user-event": "^7.2.1",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^11.15.10",
+        "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
+        "@types/react-redux": "^7.1.9",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.3.0",
+        "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
+        "gh-pages": "^2.2.0",
+        "html-webpack-plugin": "^4.5.0",
+        "jest": "^26.6.3",
+        "react-dev-utils": "^10.2.1",
+        "redux-devtools-extension": "^2.13.8",
+        "style-loader": "^2.0.0",
+        "ts-jest": "^26.4.4",
+        "ts-loader": "^8.0.11",
+        "ts-node": "^9.0.0",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.4.0",
+        "webpack-cli": "^4.2.0",
+        "webpack-dev-server": "^3.11.0",
+        "workbox-webpack-plugin": "^5.1.4",
+        "yaml-loader": "^0.6.0"
+    },
+    "jest": {
+        "resetModules": true,
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    },
+    "port": 12018
+}

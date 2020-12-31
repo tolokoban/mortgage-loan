@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <style>
+        #SPLASH {
+            background-color: #123;
+        }
+
+        #SPLASH,
+        #SPLASH>* {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+            font-size: 5vw;
+            color: #56abff;
+            text-shadow: 0 0 1vw #123, .5vw 0 1vw #123, -.5vw 0 1vw #123, 0 .5vw 1vw #123, 0 -.5vw 1vw #123;
+        }
+
+        @keyframes SPLASH {
+            0% {
+                stroke-dashoffset: -300%;
+            }
+
+            100% {
+                stroke-dashoffset: 450%;
+            }
+        }
+
+        #SPLASH>svg path {
+            animation: SPLASH 2.73s linear infinite;
+        }
+
+        #SPLASH>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #SPLASH>div>div>div {
+            text-align: center;
+        }
+
+        #SPLASH>div>div>div.version {
+            font-size: 50%;
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="ROOT" class="thm-bg0"></div>
+    <div id="SPLASH">
+        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            preserveApectRatio="xMidYMid meet" viewBox="-55 -45 110 90">
+            <defs>
+                <radialGradient id="grad">
+                    <stop offset="0" stop-color="#123" stop-opacity="1" />
+                    <stop offset="10%" stop-color="#123" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#123" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+            <path stroke="orange" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="400% 400%"
+                d="M0,0Q10,-30,25,-30,50,-30,50,0 50,30,25,30,10,30,0,0Q-10,-30,-25,-30,-50,-30,-50,0 -50,30,-25,30,-10,30,0,0" />
+            <path stroke="#123" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="400% 400%"
+                d="M0,0Q10,-30,25,-30,50,-30,50,0 50,30,25,30,10,30,0,0Q-10,-30,-25,-30,-50,-30,-50,0 -50,30,-25,30,-10,30,0,0" />
+            <circle r="40" fill="url(#grad)" />
+        </svg>
+        <div>
+            <div>
+                <div class="title"><%= htmlWebpackPlugin.options.title %></div>
+                <div class="version"><%= htmlWebpackPlugin.options.version %></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
