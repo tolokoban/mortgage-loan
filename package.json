@@ -1,5 +1,5 @@
 {
-    "name": "template-react-typesctipt",
+    "name": "mortgage-loan",
     "version": "0.1.0",
     "private": false,
     "homepage": "./",
@@ -21,7 +21,7 @@
         "predeploy": "yarn build",
         "deploy": "gh-pages -d build",
         "prestart": "yarn link tfw",
-        "start": "webpack --mode development serve",
+        "start": "webpack serve",
         "build": "webpack",
         "test": "jest --watch"
     },
