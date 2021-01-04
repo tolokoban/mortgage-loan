@@ -14,7 +14,7 @@
         "react-redux": "^6.0.1",
         "react-test-renderer": "^16.13.1",
         "redux": "^4.0.5",
-        "tfw": "^0",
+        "tfw": "^0.56.1",
         "typescript": "^3.9.5"
     },
     "scripts": {

@@ -142,6 +142,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
                         <InputInteger
                             label="Nombre d'années"
                             value={year}
+                            onChange={v => this.upd({ year: v })}
                         />
                         <Button
                             label="Calcul du remboursement"
